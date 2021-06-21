@@ -1,0 +1,11 @@
+.home-container {
+    background: rgb(70, 70, 70);
+    // // height: 100%;
+    z-index: 1;
+    height: calc(100vh - 6.5rem);
+    color: rgba(255, 0, 0, 0.788);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

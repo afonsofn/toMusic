@@ -1,0 +1,37 @@
+@import "./colors";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#app-main {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+    display: flex;
+
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    #app-main {
+        flex-direction: column;
+    }
+
+    .app-container {
+        width: 100%;
+        height: 87vh;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .app-container {
+        height: 0vh;
+    }
+}
