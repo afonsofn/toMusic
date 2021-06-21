@@ -116,7 +116,7 @@
                 .previous-button,
                 .shuffle-button,
                 .loop-button {
-                    filter: invert(25%);
+                    filter: brightness(0.7);
                     transition: filter 0.5s;
 
                     &:hover {
