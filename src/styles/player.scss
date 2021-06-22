@@ -75,6 +75,8 @@
             position: absolute;
             top: 42vh;
 
+            font-family: 'Poppins', sans-serif;
+
             .track {
                 display: flex;
                 flex-direction: column;
@@ -83,12 +85,14 @@
 
                 .music-title {
                     font-size: 1.5rem;
+                    font-weight: 500;
                     color: #d8d9da;
                     letter-spacing: 0.2rem;
                 }
 
                 .artist-name {
                     font-size: 1rem;
+                    font-weight: 400;
                     color: #6e6e6e;
                 }
             }
