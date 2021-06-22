@@ -44,7 +44,7 @@ export default {
   },
   data () {
     return {
-      value: 99,
+      value: 33,
     }
   }
 }
