@@ -15,15 +15,15 @@
   background-color: #ccc;
 }
 
-/* rail style */
+/* linha a percorrer */
 .vue-slider-rail {
-  background-color: #bda1f3;
+  background-color: #c9c9c9;
   border-radius: 15px;
 }
 
-/* process style */
+/* Linha ja percorrida MUDAR DE ACORDO COM A CAPA DO ALBUM */ 
 .vue-slider-process {
-  background-color: #28ee00;
+  background-color: #8a2a2a; 
   border-radius: 15px;
 }
 
@@ -45,16 +45,16 @@
   font-size: 14px;
   white-space: nowrap;
 }
-/* dot style */
+/* BOLINHA MUDAR DE ACORDO COM A CAPA DO ALBUM */
 .vue-slider-dot-handle {
   cursor: pointer;
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #6200ee;
+  background-color: #801010;
   box-sizing: border-box;
-}
+} /* Ao redor da bolinha MUDAR DE ACORDO COM A CAPA DO ALBUM */
 .vue-slider-dot-handle::after {
   content: "";
   position: absolute;
@@ -62,7 +62,7 @@
   top: 50%;
   width: 200%;
   height: 200%;
-  background-color: rgba(98, 0, 238, 0.38);
+  background-color: rgba(148, 60, 60, 0.452);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   z-index: -1;
@@ -78,7 +78,7 @@
 }
 
 .vue-slider-dot-tooltip {
-  visibility: visible;
+  visibility: hidden;
 }
 .vue-slider-dot-tooltip-show .vue-slider-dot-tooltip-inner {
   opacity: 1;
@@ -95,10 +95,10 @@
 .vue-slider-dot-tooltip-show .vue-slider-dot-tooltip-inner-right {
   transform: rotateZ(45deg);
 }
-
+/* BALAO EM CIMA DO CONTADOR, TALVEZ PRECISEMOS DESSE VALOR */
 .vue-slider-dot-tooltip-inner {
-  border-radius: 50% 50% 50% 0px;
-  background-color: #6200ee;
+  border-radius: 50% 50% 50% 50%;
+  background-color: #ee000025;
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.2s linear;
 }
