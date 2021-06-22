@@ -35,7 +35,7 @@
 
 <script>
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/material.css'
+import '../assets/slider-style/material.css'
 
 export default {
   name: 'Player',
