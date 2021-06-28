@@ -1,22 +1,20 @@
 <template>
   <div class="home-container">
-    
-    <Slider />
-
-    <div class="categorys">
-      playlists separadas por categoria
-    </div>
-
+    <PlaylistSlider />
+  
+    <CategoriesGrid />
   </div>
 </template>
 
 <script>
-import Slider from '../components/Slider.vue'
+import PlaylistSlider from '../components/PlaylistSlider.vue'
+import CategoriesGrid from '../components/CategoriesGrid.vue'
 
 export default {
   name: 'Home',
   components: {
-    Slider
+    PlaylistSlider,
+    CategoriesGrid
   },
   mounted() { // refatorar para setup()
     M.Carousel.init(document.querySelectorAll('.carousel'), {dist: 0, numVisible: 8})

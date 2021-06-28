@@ -2,14 +2,8 @@
     background: rgb(70, 70, 70);
     z-index: 1;
     height: calc(100vh - 6.5rem);
-    color: aqua;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    .categorys {
-        align-self: center;
-    }
-   
+    justify-content: flex-start;
 }
