@@ -1,128 +1,62 @@
 <template>
-  <div class="categories">
+  <div class="categories-playlists">
     <h5>Discover new tracks</h5>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-          <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-              <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-          <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-              <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-          <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-            IMAGE
-          </td>
-          <td>
-              <a>Titulo da play</a>
-          </td>
-          <td>info</td>
-          <td>quando foi</td>
-          <td>duracao</td>
-          <td>
-            <button type="button">
-              Play
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="container-categories">
+
+      <div class="album-info-wrapper">
+        <div class="cover-album"></div>
+
+        <div class="cover-name">
+          <span>Pop Playlist</span>
+          <div class="info-play">us explicabo quisquam officia magnam itaque voluptatum contur!</div>
+        </div>
+        
+        <button type="button">
+          Play
+        </button>
+      </div>
+
+      <div class="album-info-wrapper">
+        <div class="cover-album"></div>
+
+        <div class="cover-name">
+          <span>Rock Playlist</span>
+          <div class="info-play">us explicabo quisquam officia magnam itaque voluptatum contur!</div>
+        </div>
+        
+        <button type="button">
+          Play
+        </button>
+      </div>
+
+      <div class="album-info-wrapper">
+        <div class="cover-album"></div>
+
+        <div class="cover-name">
+          <span>Pop Playlist</span>
+          <div class="info-play">us explicabo quisquam officia magnam itaque voluptatum contur!</div>
+        </div>
+        
+        <button type="button">
+          Play
+        </button>
+      </div>
+
+      <div class="album-info-wrapper">
+        <div class="cover-album"></div>
+
+        <div class="cover-name">
+          <span>Rock Playlist</span>
+          <div class="info-play">us explicabo quisquam officia magnam itaque voluptatum contur!</div>
+        </div>
+        
+        <button type="button">
+          Play
+        </button>
+      </div>
+      
+    </div>
   </div>
 </template>
 
