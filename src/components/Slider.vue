@@ -1,7 +1,7 @@
 <template>
   <div class="carousel">
     <a class="carousel-item" href="#one!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 1</p> 
@@ -10,7 +10,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#two!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 2</p> 
@@ -19,7 +19,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#three!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 3</p> 
@@ -28,7 +28,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#four!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 4</p> 
@@ -37,7 +37,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#five!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 5</p> 
@@ -46,7 +46,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#six!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 6</p> 
@@ -55,7 +55,7 @@
       </div>
     </a>
     <a class="carousel-item" href="#seven!">
-      <div class="teste">
+      <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 7</p> 
