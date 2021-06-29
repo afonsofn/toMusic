@@ -50,7 +50,7 @@
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 6</p> 
-          <p class="playlist-description">description...</p>
+          <p class="playlist-description">your playlist</p>
         </div>
       </div>
     </a>
@@ -59,7 +59,7 @@
         <p class="cover"></p>
         <div class="playlist-info">
           <p class="playlist-name">PlayList 7</p> 
-          <p class="playlist-description">description...</p>
+          <p class="playlist-description">by toMusic</p>
         </div>
       </div>
     </a>
