@@ -7,12 +7,12 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import('../views/About.vue')
-  //   // Importar dessa forma faz com que o webPack carregue as rotas atravéz do lazy-loaded, deixando a aplicação mais performática.
-  // }
+  {
+    path: '/PlaylistDetails/',
+    name: 'PlaylistDetails',
+    component: () => import('../pages/PlaylistDetails.vue')
+    // Importar dessa forma faz com que o webPack carregue as rotas atravéz do lazy-loaded, deixando a aplicação mais performática.
+  }
 ]
 
 const router = createRouter({
