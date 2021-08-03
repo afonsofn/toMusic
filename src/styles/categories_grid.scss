@@ -63,16 +63,6 @@
   }
 }
 
-// Scroll
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(175, 175, 175, 0.459); 
-  border-radius: 10px;
-}
-
 @media only screen and (max-width: 1785px) {
   .categories-playlists {
     .container-categories {

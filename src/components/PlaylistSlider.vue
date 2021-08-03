@@ -1,17 +1,15 @@
 <template>
   <div class="carousel">
-    <a class="carousel-item" href="#one!">
-      <router-link to="/PlaylistDetails/" >
-        <div class="album-wrapper">
-          <p class="cover"></p>
-          <div class="playlist-info">
-            <p class="playlist-name">PlayList 1</p> 
-            <p class="playlist-description">description...</p>
-          </div>
+    <a class="carousel-item" href="/PlaylistDetails/">
+      <div class="album-wrapper">
+        <p class="cover"></p>
+        <div class="playlist-info">
+          <p class="playlist-name">PlayList 1</p> 
+          <p class="playlist-description">description...</p>
         </div>
-      </router-link>
+      </div>
     </a>
-    <a class="carousel-item" href="#two!">
+    <a class="carousel-item" href="/PlaylistDetails/">
       <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
@@ -20,7 +18,7 @@
         </div>
       </div>
     </a>
-    <a class="carousel-item" href="#three!">
+    <a class="carousel-item" href="/PlaylistDetails/">
       <div class="album-wrapper">
         <p class="cover"></p>
         <div class="playlist-info">
