@@ -6,10 +6,9 @@
       <template v-for="(playlist, index) in toMusicPlaylists"  v-bind:key="index">
         <div class="album-info-wrapper">
           <div class="teste">
-            <router-link :to="`/PlaylistDetails/${playlist.id}`">
+            <router-link :to="`/PlaylistDetails/toMusicPlaylists/${playlist.id}`">
               <img :src="playlist.src" class="cover-album">
             </router-link>
-
             <div class="cover-name">
               <span>{{ playlist.name }}</span>
               <div class="info-play">{{ playlist.description }}</div>
@@ -33,9 +32,6 @@
         toMusicPlaylists: computed(() => this.$store.state.toMusicPlaylists),
         loading: computed(() => this.$store.state.loading)
       }
-    },
-    mounted() {
-      this.$store.dispatch("getToMusicPlaylists")
     }
   }
 </script>

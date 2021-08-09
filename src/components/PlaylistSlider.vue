@@ -4,7 +4,7 @@
   </div>
   <div v-else  class="carousel">
     <template v-for="(playlist, index) in userPlaylists"  v-bind:key="index">
-      <a class="carousel-item" :href="`/PlaylistDetails/${playlist.id}`">
+      <a class="carousel-item" :href="`/PlaylistDetails/userPlaylists/${playlist.id}`">
         <div class="album-wrapper">
           <img :src="playlist.src" class="cover">
           <div class="playlist-info">
@@ -29,7 +29,9 @@
       }
     },
     mounted() {
-      this.$store.dispatch("getUserPlaylists")
+      setTimeout(() => {
+        M.Carousel.init(document.querySelectorAll('.carousel'), {dist: 0, numVisible: 8})
+      }, 300);
     }
   }
 </script>

@@ -6,18 +6,39 @@
 
   .playlist-details-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-
     background: rgb(82, 82, 82);
     height: 30%;
     padding: 2rem;
 
-    .playlist-cover {
-      height: 19.5vh;
-      width: 19.5vh;
-      background: rgb(70, 70, 70);
+    
+    .playlist-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .playlist-cover {
+        height: 19.5vh;
+        width: 19.5vh;
+        background: rgb(70, 70, 70);
+      }
+
     }
+
+    .playlist-about {
+      width: 20%;
+      padding-right: 1rem;
+      padding-bottom: 0.6rem;
+      color: rgb(160, 160, 160);
+      border-bottom: 1px rgb(102, 102, 102) solid;
+      border-right: 1px rgb(94, 94, 94) solid;
+
+      i {
+        font-weight: 200;
+      }
+    }
+    
 
     .playlist-details-info {
       h3 {

@@ -1,13 +1,23 @@
 <template>
-  <div class="playlist-details">
+  <div v-if="!!loading">
+    loading...
+  </div>
+  <div v-else class="playlist-details">
     <section class="playlist-details-header">
-      <div class="playlist-cover"></div>
+      <div class="playlist-info">
+        <img :src="playlistDetails.src" class="playlist-cover">
 
-      <div class="playlist-details-info">
-        <p>PLAYLIST</p>
-        <h3>Rock n' Roll</h3>
-        <span>Mariana Cavalcanti - 4likes - 1666 songs,  10hr 55min</span>
+        <div class="playlist-details-info">
+          <p>PLAYLIST</p>
+          <h3>{{ playlistDetails.name }}</h3>
+          <span>{{ playlistDetails.author }} - {{ playlistDetails.tracks.length }} tracks,  10hr 55min</span>
+        </div>
       </div>
+      <div class="playlist-about">
+        <h5>About</h5>
+        <i>{{ playlistDetails.description }}</i>
+      </div>
+      
     </section>
 
     <section class="playlist-details-body">
@@ -110,5 +120,25 @@
     </section>
   </div>
 </template>
+
+<script>
+  import { computed } from 'vue'
+
+  export default {
+    name: 'PlayerSlider',
+    data () {
+      return {
+        playlistDetails: computed(() => this.$store.state.playListOnDetail),
+        loading: computed(() => this.$store.state.loadingDetails)
+      }
+    },
+    created() {
+      this.$store.commit("setLoadingDetails", true)
+    },
+    mounted() {
+      this.$store.dispatch("getPlaylists", {type: this.$route.params.type, id: this.$route.params.id})
+    }
+  }
+</script>
 
 <style src="@/styles/playlist_details.scss" lang="scss" scoped />

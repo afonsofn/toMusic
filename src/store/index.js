@@ -5,7 +5,9 @@ export default createStore({
   state: {
     userPlaylists: null,
     toMusicPlaylists: null,
-    loading: true
+    playListOnDetail: null,
+    loading: true,
+    loadingDetails: true
   },
   mutations: {
     setUserPlaylists(state, payload) {
@@ -14,8 +16,14 @@ export default createStore({
     setToMusicPlaylists(state, payload) {
       state.toMusicPlaylists = payload
     },
+    setPlayListOnDetail(state, payload) {
+      state.playListOnDetail = payload
+    },
     setLoading(state, payload) {
       state.loading = payload
+    },
+    setLoadingDetails(state, payload) {
+      state.loadingDetails = payload
     }
   },
   actions: {
@@ -40,6 +48,16 @@ export default createStore({
       })
       .finally(() => {
         commit("setLoading", false)
+      })
+    },
+    getPlaylists({ commit }, { type, id }) {
+      commit("setLoadingDetails", true)
+      api(`/${type}/${id}`)
+      .then(({ data }) => {
+        commit("setPlayListOnDetail", data)
+      })
+      .finally(() => {
+        commit("setLoadingDetails", false)
       })
     }
   },

@@ -8,7 +8,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/PlaylistDetails/',
+    path: '/PlaylistDetails/:type/:id',
     name: 'PlaylistDetails',
     component: () => import('../pages/PlaylistDetails.vue')
     // Importar dessa forma faz com que o webPack carregue as rotas atravéz do lazy-loaded, deixando a aplicação mais performática.
