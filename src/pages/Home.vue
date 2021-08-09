@@ -17,7 +17,7 @@ export default {
     CategoriesGrid
   },
   mounted() { // refatorar para setup()
-    M.Carousel.init(document.querySelectorAll('.carousel'), {dist: 0, numVisible: 8})
+    
   }
 }
 </script>

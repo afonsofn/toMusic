@@ -1,69 +1,37 @@
 <template>
-  <div class="carousel">
-    <a class="carousel-item" href="/PlaylistDetails/">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 1</p> 
-          <p class="playlist-description">description...</p>
+  <div v-if="!!loading">
+    loading...
+  </div>
+  <div v-else  class="carousel">
+    <template v-for="(playlist, index) in userPlaylists"  v-bind:key="index">
+      <a class="carousel-item" :href="`/PlaylistDetails/${playlist.id}`">
+        <div class="album-wrapper">
+          <img :src="playlist.src" class="cover">
+          <div class="playlist-info">
+            <p class="playlist-name">{{ playlist.name }}</p> 
+            <p class="playlist-description">{{ playlist.author }}</p>
+          </div>
         </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="/PlaylistDetails/">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 2</p> 
-          <p class="playlist-description">description...</p>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="/PlaylistDetails/">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 3</p> 
-          <p class="playlist-description">description...</p>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="#four!">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 4</p> 
-          <p class="playlist-description">description...</p>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="#five!">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 5</p> 
-          <p class="playlist-description">description...</p>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="#six!">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 6</p> 
-          <p class="playlist-description">your playlist</p>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="#seven!">
-      <div class="album-wrapper">
-        <p class="cover"></p>
-        <div class="playlist-info">
-          <p class="playlist-name">PlayList 7</p> 
-          <p class="playlist-description">by toMusic</p>
-        </div>
-      </div>
-    </a>
+      </a>
+    </template>
   </div>
 </template>
+
+<script>
+  import { computed } from 'vue'
+
+  export default {
+    name: 'PlayerSlider',
+    data () {
+      return {
+        userPlaylists: computed(() => this.$store.state.userPlaylists),
+        loading: computed(() => this.$store.state.loading)
+      }
+    },
+    mounted() {
+      this.$store.dispatch("getUserPlaylists")
+    }
+  }
+</script>
 
 <style src="@/styles/slider.scss" lang="scss" scoped />
