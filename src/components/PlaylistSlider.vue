@@ -1,12 +1,15 @@
 <template>
-  <div v-if="!!loading">
-    loading...
+  <div v-if="!!loading" class="loading">
+    <Loading />
   </div>
   <div v-else  class="carousel">
     <template v-for="(playlist, index) in userPlaylists"  v-bind:key="index">
       <a class="carousel-item" :href="`/PlaylistDetails/userPlaylists/${playlist.id}`">
         <div class="album-wrapper">
-          <img :src="playlist.src" class="cover">
+          <div class="cover-container">
+            <img :src="playlist.src" class="cover">
+            <img src="../assets/play.svg" alt="" class="play-btn">
+          </div>
           <div class="playlist-info">
             <p class="playlist-name">{{ playlist.name }}</p> 
             <p class="playlist-description">{{ playlist.author }}</p>
@@ -19,9 +22,13 @@
 
 <script>
   import { computed } from 'vue'
+  import Loading from './Loading.vue'
 
   export default {
     name: 'PlayerSlider',
+    components: {
+      Loading
+    },
     data () {
       return {
         userPlaylists: computed(() => this.$store.state.userPlaylists),

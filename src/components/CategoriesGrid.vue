@@ -1,11 +1,15 @@
 <template>
-  <div class="categories-playlists">
+  <div  class="categories-playlists">
     <h5>Discover new tracks</h5>
 
-    <div class="container-categories">
+    <div v-if="!!loading" class="loading">
+      <Loading />
+    </div>
+
+    <div v-else class="container-categories">
       <template v-for="(playlist, index) in toMusicPlaylists"  v-bind:key="index">
         <div class="album-info-wrapper">
-          <div class="teste">
+          <div class="album-info">
             <router-link :to="`/PlaylistDetails/toMusicPlaylists/${playlist.id}`">
               <img :src="playlist.src" class="cover-album">
             </router-link>
@@ -24,9 +28,13 @@
 
 <script>
   import { computed } from 'vue'
+  import Loading from './Loading.vue'
 
   export default {
     name: 'PlayerSlider',
+    components: {
+      Loading
+    },
     data () {
       return {
         toMusicPlaylists: computed(() => this.$store.state.toMusicPlaylists),

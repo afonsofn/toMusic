@@ -1,6 +1,6 @@
 <template>
-  <div v-if="!!loading">
-    loading...
+  <div v-if="!!loading" class="loading">
+    <Loading />
   </div>
   <div v-else class="playlist-details">
     <section class="playlist-details-header">
@@ -15,7 +15,7 @@
       </div>
       <div class="playlist-about">
         <h5>About</h5>
-        <i>{{ playlistDetails.description }}</i>
+        <i>"{{ playlistDetails.description }}"</i>
       </div>
       
     </section>
@@ -123,9 +123,13 @@
 
 <script>
   import { computed } from 'vue'
+  import Loading from '../components/Loading.vue'
 
   export default {
     name: 'PlayerSlider',
+    components: {
+      Loading
+    },
     data () {
       return {
         playlistDetails: computed(() => this.$store.state.playListOnDetail),

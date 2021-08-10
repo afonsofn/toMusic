@@ -1,9 +1,8 @@
 .home-container {
-    background: rgb(70, 70, 70);
+    background: linear-gradient(rgba(0, 0, 0, 0.76) 0%, rgb(73, 73, 73) 70%);
     z-index: 1;
     height: calc(100vh - 6.5rem);
 
     display: flex;
     flex-direction: column;
-    // justify-content: flex-start;
 }
