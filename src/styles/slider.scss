@@ -70,11 +70,10 @@
         &:hover {
           .play-btn {
             visibility: visible;
-            animation: go-back 0.3s, teste 0.3s;
-  
+            animation: to-up 0.3s, slowly-show 0.3s;
           }
   
-          @keyframes go-back {
+          @keyframes to-up {
             from {
               transform: translateY(8px);
             }
@@ -83,7 +82,7 @@
             }
           }
   
-          @keyframes teste {
+          @keyframes slowly-show {
             from {
               opacity: 0;
             }

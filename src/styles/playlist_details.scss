@@ -85,18 +85,61 @@
           }
 
         }
+
         i {
           font-size: 30px;
+          user-select: none;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 
       i.back-home {
+        user-select: none;
         font-size: 35px;
         color: rgb(199, 199, 199);
       }
     }
 
     table {
+      tr {
+        transition: background-color 0.5s;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(83, 83, 83);
+
+          .first {
+            span {
+              visibility: hidden;
+            }
+
+            .play-btn {
+              visibility: visible;
+              animation: slowly-show 0.9s;
+            }
+
+            @keyframes slowly-show {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .first {
+        display: flex;
+
+        .play-btn {
+          visibility: hidden;
+          height: 1.6rem;
+        }
+      }
       
       .last {
         width: 8rem;
