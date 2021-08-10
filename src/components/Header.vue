@@ -15,16 +15,23 @@
     </div>
 
     <div class="header-right-wrapper">
-      Fry, 8 April
+      {{ date }}
     </div>
 
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Header'
-}
+  import format from 'date-fns/format'
+
+  export default {
+    name: 'Header',
+    data() {
+      return {
+        date: format(new Date(), 'EEEEEE, d MMMM')
+      }
+    }
+  }
 </script>
 
 <style src="@/styles/header.scss" lang="scss" scoped />

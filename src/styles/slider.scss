@@ -32,7 +32,23 @@
         height: 35px;
         visibility: hidden;
 
-        transition: visibility 1s;
+        transition: visibility 0.5s;
+
+        animation: fadeOff 0.5s, to-down 0.4s;
+      }
+
+      @keyframes fadeOff {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      @keyframes to-down {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(8px);
+        }
       }
     }
   
@@ -70,24 +86,20 @@
         &:hover {
           .play-btn {
             visibility: visible;
-            animation: to-up 0.3s, slowly-show 0.3s;
+            animation: to-up 0.3s, fadeIn 0.3s;
           }
   
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
           @keyframes to-up {
             from {
               transform: translateY(8px);
             }
             to {
               transform: translateY(0);
-            }
-          }
-  
-          @keyframes slowly-show {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
             }
           }
         }

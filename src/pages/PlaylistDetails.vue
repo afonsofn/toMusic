@@ -10,7 +10,7 @@
         <div class="playlist-details-info">
           <p>PLAYLIST</p>
           <h3>{{ playlistDetails.name }}</h3>
-          <span>{{ playlistDetails.author }} - {{ playlistDetails.tracks.length }} tracks,  10hr 55min</span>
+          <span>{{ playlistDetails.author }} - {{ playlistDetails.tracks.length }} tracks, {{calculateDuration(playlistDetails.tracks)}}</span>
         </div>
       </div>
       <div class="playlist-about">
@@ -51,8 +51,8 @@
               </td>
               <td>{{ track.title }}</td>
               <td>{{ track.artist }}</td>
-              <td>{{ track.date }}</td>
-              <td class="last">{{ track.duration }}</td>
+              <td>{{ converteData(track.date) }}</td>
+              <td class="last">{{ convertDuration(track.duration) }}</td>
             </tr>
           </template>
         </tbody>
@@ -62,8 +62,11 @@
 </template>
 
 <script>
-  import { computed } from 'vue'
+  import { computed, onBeforeMount } from 'vue'
   import Loading from '../components/Loading.vue'
+  import format from 'date-fns/format'
+  import parseISO from 'date-fns/parseISO'
+  import { convertDurationToTimeString, calculateTotalDuration } from '../utils/utils'
 
   export default {
     name: 'PlayerSlider',
@@ -74,12 +77,17 @@
       return {
         playlistDetails: computed(() => this.$store.state.playListOnDetail),
         loading: computed(() => this.$store.state.loadingDetails),
-        favorite: true
+        favorite: true,
+        convertDuration: convertDurationToTimeString,
+        calculateDuration: calculateTotalDuration
       }
     },
     methods: {
       makeFavorite() {
         this.favorite = !this.favorite
+      },
+      converteData(date) {
+        return format(parseISO(date), 'MMMM d, Y');
       }
     },
     created() {
