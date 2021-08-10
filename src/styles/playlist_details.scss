@@ -1,0 +1,115 @@
+.playlist-details {
+  background: linear-gradient(143.8deg, rgba(0, 0, 0, 0.8) 0%, rgb(97, 97, 97) 70%);
+  color: #e9e9e9;
+  z-index: 1;
+  height: calc(100vh - 6.5rem);
+
+  .playlist-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 30%;
+    padding: 2rem;
+
+    
+    .playlist-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      .playlist-cover {
+        height: 19.5vh;
+        width: 19.5vh;
+        background: rgb(70, 70, 70);
+      }
+
+    }
+
+    .playlist-about {
+      width: 20%;
+      padding-right: 1rem;
+      padding-bottom: 0.6rem;
+      color: rgb(224, 224, 224);
+      
+      h5 {
+        font-weight: 500;
+      }
+      
+      i {
+        font-weight: 200;
+        color: rgb(172, 172, 172);
+      }
+    }
+
+    .playlist-details-info {
+      h3 {
+        margin: 0;
+        font-weight: 600;
+      }
+  
+      p,
+      span {
+        font-weight: 200;
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  .playlist-details-body {
+    height: 70%;
+    overflow: auto;
+    padding: 3rem;
+    padding-top: 1rem;
+    background: rgba(58, 58, 58, 0.116);
+    
+    .nav-playlist {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        .play-btn {
+          background: grey;
+          width: 3.3rem;
+          border-radius: 3.3rem;
+          transition: filter 0.5s;
+
+          &:hover {
+            filter: brightness(1.3);
+            cursor: pointer;
+          }
+
+        }
+        i {
+          font-size: 30px;
+        }
+      }
+
+      i.back-home {
+        font-size: 35px;
+        color: rgb(199, 199, 199);
+      }
+    }
+
+    table {
+      
+      .last {
+        width: 8rem;
+      } 
+    }
+  }
+}
+
+.loading {
+  background: linear-gradient(143.8deg, rgba(0, 0, 0, 0.8) 0%, rgb(97, 97, 97) 70%);
+  z-index: 1;
+  height: calc(100vh - 6.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

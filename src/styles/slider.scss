@@ -1,0 +1,118 @@
+.carousel {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border-bottom: 1px rgb(87, 87, 87) solid;
+  width: 90%;
+  height: 30%;
+
+  .album-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+
+    .cover-container {
+      position: relative;
+
+      img.cover {
+        height: 9rem;
+        width: 9rem;
+        border-radius: 8px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .play-btn {
+        position: absolute;
+        top: 67%;
+        left: 70%;
+        background: rgba(139, 38, 38, 0.808);
+        border-radius: 50%;
+        height: 35px;
+        visibility: hidden;
+
+        transition: visibility 1s;
+      }
+    }
+  
+    div.playlist-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      height: 4rem;
+      
+      p {
+        padding: 0;
+        margin: 0;
+      }
+  
+      .playlist-name {
+        font-size: 1.1rem;
+        font-weight: 550;
+        color: rgb(231, 231, 231);
+      }
+  
+      .playlist-description {
+        font-size: 1rem;
+        font-weight: 100;
+        color: rgb(190, 190, 190);
+      }
+    }
+  }
+
+  // Só o carousel ativo
+  a.carousel-item.active {
+    .album-wrapper {
+      .cover-container {
+        &:hover {
+          .play-btn {
+            visibility: visible;
+            animation: go-back 0.3s, teste 0.3s;
+  
+          }
+  
+          @keyframes go-back {
+            from {
+              transform: translateY(8px);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+  
+          @keyframes teste {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .album-wrapper {
+      margin-top: 1.5rem;
+    
+      p.cover {
+        height: 7rem;
+        width: 7rem;
+      }
+    }
+  }
+}
+
+.loading {
+  width: 90%;
+  height: 30%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

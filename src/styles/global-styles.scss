@@ -3,6 +3,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #app-main {
@@ -17,16 +18,19 @@ html, body {
     }
 }
 
-
-
 @media only screen and (max-width: 1200px) {
     #app-main {
         flex-direction: column;
-    }
 
-    .app-container {
-        width: 100%;
-        height: 87vh;
+        .app-container {
+            width: 100%;
+            height: calc(100vh - 8.1rem);
+
+            .home-container,
+            .playlist-details {
+                height: calc(100vh - 14.6rem);
+            }
+        }
     }
 }
 
@@ -34,4 +38,14 @@ html, body {
     .app-container {
         height: 0vh;
     }
+}
+
+// Scroll
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(175, 175, 175, 0.459); 
+    border-radius: 10px;
 }

@@ -27,7 +27,7 @@
             font-weight: 500;
 
             img {
-                width: 3.5rem;
+                width: 3.6rem;
             }
         }
 
@@ -46,15 +46,21 @@
                 
                 border: none;
                 border-bottom: 1px rgb(131, 131, 131) solid;
+                height: 1.6rem;
                 min-width: 18rem;
+                font-size: 0.9rem;
                 
                 background: transparent;
                 color: rgb(172, 172, 172);
-
-                &:focus {
-                    outline: 0;
-                }
                 
+                &[type=text]:focus {
+                    border-bottom: 1px  solid;
+                    box-shadow: 0 1px 0 0 rgba(100, 100, 100, 0.671);
+                }
+
+                &::-webkit-input-placeholder {
+                    color: rgba(172, 172, 172, 0.479);
+                }
             }
 
             i {

@@ -17,6 +17,10 @@
     components: {
       Header,
       Player
+    },
+    mounted() {
+      this.$store.dispatch("getToMusicPlaylists")
+      this.$store.dispatch("getUserPlaylists")
     }
   }
 </script>
