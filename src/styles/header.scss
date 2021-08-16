@@ -37,41 +37,32 @@
             width: 1px;
         }
 
-        .input-field {
-            position: relative;
-
-            input {
-                font-family: 'Poppins', sans-serif;
-                letter-spacing: 0.1rem;
-                
-                border: none;
-                border-bottom: 1px rgb(131, 131, 131) solid;
-                height: 1.6rem;
-                min-width: 18rem;
-                font-size: 0.9rem;
-                
-                background: transparent;
-                color: rgb(172, 172, 172);
-                
-                &[type=text]:focus {
-                    border-bottom: 1px  solid;
-                    box-shadow: 0 1px 0 0 rgba(100, 100, 100, 0.671);
-                }
-
-                &::-webkit-input-placeholder {
-                    color: rgba(172, 172, 172, 0.479);
-                }
-            }
-
-            i {
-                position: absolute;
-                left: 90%;
-
-                font-size: 20px;
-            }
+        h6 {
+            font-size: 1rem;
+            color: rgba(172, 172, 172, 0.726);
         }
     }
 
     .header-right-wrapper {
     }
+}
+
+@media only screen and (max-width: 500px) {
+    .header-container {
+        justify-content: center;
+    
+        .header-left-wrapper {
+            .divider {
+                display: none;
+            }
+    
+            h6 {
+                display: none;
+            }
+        }
+    
+        .header-right-wrapper {
+            display: none;
+        }
+    }    
 }

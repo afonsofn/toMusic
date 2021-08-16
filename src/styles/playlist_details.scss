@@ -8,9 +8,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: 30%;
+    height: 16rem;
     padding: 2rem;
-
+    margin-top: -1rem;
     
     .playlist-info {
       display: flex;
@@ -18,8 +18,8 @@
       gap: 1.5rem;
 
       .playlist-cover {
-        height: 19.5vh;
-        width: 19.5vh;
+        height: 11rem;
+        width: 11rem;
         background: rgb(70, 70, 70);
       }
 
@@ -56,7 +56,7 @@
   }
 
   .playlist-details-body {
-    height: 70%;
+    height: calc(100% - 14.2rem);
     overflow: auto;
     padding: 3rem;
     padding-top: 1rem;
@@ -87,7 +87,7 @@
         }
 
         i {
-          font-size: 30px;
+          font-size: 2rem;
           user-select: none;
 
           &:hover {
@@ -98,7 +98,7 @@
 
       i.back-home {
         user-select: none;
-        font-size: 35px;
+        font-size: 3rem;
         color: rgb(199, 199, 199);
       }
     }
@@ -155,4 +155,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .playlist-details {
+    .playlist-details-header {
+    }
+  }
 }

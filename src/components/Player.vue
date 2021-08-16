@@ -60,7 +60,7 @@
           <vue-slider
             v-model="value"
             :tooltip="'none'"
-            :width="500"
+            :width="150"
           ></vue-slider>
         </div>
       </div>

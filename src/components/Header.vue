@@ -8,10 +8,7 @@
 
       <div class="divider" />
 
-      <div class="input-field">
-        <input type="text" placeholder="Find your vibe soundtrack">
-        <i class="material-icons">search</i>
-      </div>
+      <h6>Find your vibe soundtrack</h6>
     </div>
 
     <div class="header-right-wrapper">

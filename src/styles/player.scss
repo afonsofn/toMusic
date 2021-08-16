@@ -53,10 +53,10 @@
             background-size: cover;
 
             position: absolute;
-            border-radius: 10px;
+            border-radius: 1rem;
             height: 35vh;
             width: 35vh;
-            bottom: 60%;
+            bottom: 50%;
             box-shadow: 0.5px 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
 
             transition: filter 0.4s;
@@ -107,8 +107,8 @@
 
                 .play-btn {
                     background: linear-gradient(to bottom right, rgba(56, 56, 56, 0.808), rgba(179, 50, 50, 0.541) 90%);
-                    width: 50px;
-                    border-radius: 50px;
+                    width: 3.2rem;
+                    border-radius: 50%;
                     transition: filter 0.5s;
 
                     &:hover {
@@ -148,9 +148,10 @@
         display: block;
         height: 8.2rem;
         width: 100%;
+        z-index: 999 !important;
 
         .background-image-blur {
-            filter: blur(9px);
+            filter: blur(7px);
         }
 
         .black-mask {
@@ -165,9 +166,11 @@
                 gap: 1rem;
 
                 .cover-album {
-                    border-radius: 7px;
+                    border-radius: 0.5rem;
                     height: 6rem !important;
                     width: 6rem !important;
+                    min-height: 6rem !important;
+                    min-width: 6rem !important;
                     margin-left: 2rem;
                     position: static;
                 }
@@ -198,14 +201,14 @@
                 
                 .buttons {
                     .play-btn {
-                        width: 35px;
+                        width: 2.9rem;
                     }
     
                     .next-button,
                     .previous-button,
                     .shuffle-button,
                     .loop-button {
-                        width: 20px;
+                        width: 1.5rem;
                     }  
                 }
             }
@@ -219,10 +222,39 @@
     }
 }
 
-@media only screen and (max-width: 640px) {
-    .player-container {
-        height: 100vh;
-        width: 100%;
-        min-width: 100px;
+@media only screen and (max-width: 550px) {
+    .player-container-med-down {
+        .black-mask {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            div.album-info {
+                display: none;
+            }
+
+            .player-content {
+                margin-top: 1.5rem;
+                position: static;
+                gap: 0.75rem;
+                
+                .buttons {
+                    .play-btn {
+                        width: 2.9rem;
+                    }
+    
+                    .next-button,
+                    .previous-button,
+                    .shuffle-button,
+                    .loop-button {
+                        width: 1.5rem;
+                    }  
+                }
+            }
+
+            .centralize {
+                display: none;
+            }
+        }
     }
 }

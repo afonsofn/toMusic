@@ -4,7 +4,27 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    box-sizing: border-box;
 }
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 950px) {
+    html {
+        font-size: 75%;
+    }
+}
+
 
 #app-main {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -42,7 +62,7 @@ html, body {
 
 // Scroll
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 0.3rem;
 }
 
 ::-webkit-scrollbar-thumb {

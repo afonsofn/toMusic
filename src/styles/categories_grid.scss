@@ -33,9 +33,10 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        width: 80%;
 
         .cover-album {
-          border-radius: 5px;
+          border-radius: 0.5rem;
           height: 6rem;
           width: 6rem ;
           box-shadow: 0.5px 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
@@ -46,7 +47,7 @@
           flex-direction: column;
           
           span {
-            font-size: 18px;
+            font-size: 1.2rem;
             font-weight: 500;
             color: white;
           }
@@ -55,6 +56,13 @@
             color: rgb(158, 158, 158);
           }
         }
+      }
+
+      .btn-small {
+        width: 3.5rem ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
@@ -67,6 +75,12 @@
         width: 100%;
       }
     }
+  }
+}
+
+@media only screen and (max-height: 780px) {
+  .categories-playlists {
+    height: calc(70% - 4.2rem);
   }
 }
 
